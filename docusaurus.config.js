@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'kidow', // Usually your GitHub org/user name.
   projectName: 'focus-ui', // Usually your repo name.
-
+  plugins: ['docusaurus-tailwindcss'],
   presets: [
     [
       '@docusaurus/preset-classic',
