@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Focus UI',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'React components made with Tailwindcss',
   url: 'https://focus-ui-kidow.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -50,7 +50,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial'
+            label: 'Docs'
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
@@ -103,7 +103,7 @@ const config = {
             ]
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
+        copyright: `Copyright © ${new Date().getFullYear()} Focus UI, Inc. Built with Docusaurus.`
       },
       prism: {
         theme: lightCodeTheme,

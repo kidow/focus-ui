@@ -29,7 +29,10 @@ function HomepageHeader() {
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext()
   return (
-    <Layout title="" description="React components made with Tailwindcss.">
+    <Layout
+      title="Focus UI"
+      description="React components made with Tailwindcss."
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
