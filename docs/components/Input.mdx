@@ -1,0 +1,28 @@
+---
+sidebar_position: 2
+---
+
+# Input
+
+import classnames from 'classnames'
+
+```jsx title="components/Input/index.tsx"
+import { FunctionComponent } from 'react'
+import classnames from 'classnames'
+
+interface Props
+  extends Omit<
+    React.DetailedHTMLProps<
+      React.InputHTMLAttributes<HTMLInputElement>,
+      HTMLInputElement
+    >,
+    'size'
+  > {
+  size?: 'xs' | 'sm' | 'md' | 'lg';
+  onEnter?: () => {};
+}
+
+const Input: FunctionComponent<Props> = ({}) => {
+  return <input />
+}
+```

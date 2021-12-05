@@ -1,13 +1,4 @@
----
-sidebar_position: 1
----
-
-import classnames from 'classnames'
-
-# Button
-
-```jsx title="components/Button/index.tsx"
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import classnames from 'classnames'
 
 interface Props
@@ -15,8 +6,8 @@ interface Props
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  loading?: boolean;
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  loading?: boolean
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   theme?:
     | 'light'
     | 'dark'
@@ -24,48 +15,10 @@ interface Props
     | 'success'
     | 'danger'
     | 'primary'
-    | 'ghost';
+    | 'ghost'
 }
 
 const Button: FunctionComponent<Props> = ({
-  loading,
-  size,
-  theme,
-  disabled,
-  className,
-  children,
-  ...props
-}) => {
-  return (
-    <button
-      className={classnames(
-        'border leading-6 font-medium transition ease-in-out duration-150 hover:opacity-70 active:opacity-90',
-        {
-          'cursor-not-allowed': loading || disabled,
-          'inline-flex items-center justify-center': loading,
-          'text-xs py-px px-2 rounded': size === 'xs',
-          'text-sm py-1 px-3': size === 'sm',
-          'text-base py-2 px-4': size === 'md',
-          'text-lg py-3 px-5': size === 'lg',
-          'text-xl py-4 px-6': size === 'xl',
-          'bg-black text-white': theme === 'dark',
-          'bg-gray-300 text-gray-600': theme === 'secondary',
-          'bg-green-500 text-white': theme === 'success',
-          'bg-red-600 text-white': theme === 'danger',
-          'bg-blue-500 text-white': theme === 'primary',
-          'bg-white text-black': theme === 'light',
-          'bg-transparent border-gray-900': theme === 'ghost',
-          'rounded-md': size !== 'xs'
-        }
-      )}
-    >
-      asd
-    </button>
-  )
-}
-```
-
-export const Button = ({
   loading,
   size = 'md',
   theme = 'dark',
@@ -76,7 +29,7 @@ export const Button = ({
 }) => {
   return (
     <button
-      class={classnames(
+      className={classnames(
         'border leading-6 font-medium transition ease-in-out duration-150 hover:opacity-70 active:opacity-90',
         {
           'cursor-not-allowed': loading || disabled,
@@ -129,46 +82,4 @@ export const Button = ({
   )
 }
 
-## Theme
-
-<div class="arrange">
-  <Button>dark (default)</Button>
-  <Button theme="light">light</Button>
-  <Button theme="primary">primary</Button>
-  <Button theme="secondary">secondary</Button>
-  <Button theme="success">success</Button>
-  <Button theme="danger">danger</Button>
-  <Button theme="ghost">ghost</Button>
-</div>
-
-## Size
-
-<div class="arrange">
-  <Button size="xl">xl</Button>
-  <Button size="lg">lg</Button>
-  <Button>md (default)</Button>
-  <Button size="sm">sm</Button>
-  <Button size="xs">xs</Button>
-</div>
-
-## Loading
-
-<div class="arrange">
-  <Button loading size="xl">
-    Loading
-  </Button>
-  <Button loading size="lg">
-    Loading
-  </Button>
-  <Button loading>Loading</Button>
-  <Button loading size="sm">
-    Loading
-  </Button>
-  <Button loading size="xs">
-    Loading
-  </Button>
-</div>
-
-## Disabled
-
-<Button disabled>disabled</Button>
+export default Button
